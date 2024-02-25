@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator wykresu Gantta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Generator wykresu Gantta</h2>
+        <form id="ganttForm">
+            <div class="form-group">
+                <label for="taskName">Nazwa zadania:</label>
+                <input type="text" id="taskName" name="taskName" placeholder="Wprowadź nazwę zadania" required>
+            </div>
+            <div class="form-group">
+                <label for="startDate">Data rozpoczęcia (miesiąc rok):</label>
+                <input type="text" id="startDate" name="startDate" placeholder="MM YYYY" pattern="\d{2} \d{4}" required>
+            </div>
+            <div class="form-group">
+                <label for="endDate">Data zakończenia (miesiąc rok):</label>
+                <input type="text" id="endDate" name="endDate" placeholder="MM YYYY" pattern="\d{2} \d{4}" required>
+            </div>
+            <div class="form-group">
+                <label for="color">Kolor wykresu:</label>
+                <input type="color" id="color" name="color" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Dodaj zadanie">
+            </div>
+        </form>
+        <h2>Lista zadań</h2>
+        <table id="taskTable">
+            <thead>
+                <tr>
+                    <th>Nazwa zadania</th>
+                    <th>Data rozpoczęcia</th>
+                    <th>Data zakończenia</th>
+                    <th>Kolor wykresu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Tutaj będą dodawane zadania dynamicznie -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
